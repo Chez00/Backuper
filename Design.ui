@@ -41,49 +41,6 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>450</x>
-         <y>0</y>
-         <width>40</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>40</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Snap ITC</family>
-         <pointsize>14</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(200,0,0);
-background-color: qlineargradient(spread:pad, x1:0.227273, y1:0.011, x2:0.574, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.397727 rgba(255, 94, 93, 255), stop:1 rgba(255, 197, 196, 255));
-color: rgb(255, 255, 255);
-border-radius: 5px;
-</string>
-       </property>
-       <property name="text">
-        <string>X</string>
-       </property>
-      </widget>
      </widget>
     </item>
     <item row="1" column="2" rowspan="2" colspan="2">

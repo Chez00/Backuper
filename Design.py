@@ -45,22 +45,6 @@ class Ui_MainWindow(object):
         self.frame.setMaximumSize(QSize(16777215, 30))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.pushButton = QPushButton(self.frame)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(450, 0, 40, 30))
-        self.pushButton.setMinimumSize(QSize(0, 30))
-        self.pushButton.setMaximumSize(QSize(40, 30))
-        font = QFont()
-        font.setFamilies([u"Snap ITC"])
-        font.setPointSize(14)
-        font.setBold(False)
-        self.pushButton.setFont(font)
-        self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet(u"background-color: rgb(200,0,0);\n"
-"background-color: qlineargradient(spread:pad, x1:0.227273, y1:0.011, x2:0.574, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.397727 rgba(255, 94, 93, 255), stop:1 rgba(255, 197, 196, 255));\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;\n"
-"")
 
         self.gridLayout.addWidget(self.frame, 0, 2, 1, 2)
 
@@ -127,10 +111,10 @@ class Ui_MainWindow(object):
 
         self.frame_2 = QFrame(self.centralwidget)
         self.frame_2.setObjectName(u"frame_2")
-        font1 = QFont()
-        font1.setPointSize(16)
-        font1.setBold(True)
-        self.frame_2.setFont(font1)
+        font = QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        self.frame_2.setFont(font)
         self.frame_2.setStyleSheet(u"")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
@@ -139,7 +123,7 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.frame_2)
         self.label.setObjectName(u"label")
         self.label.setMaximumSize(QSize(16777215, 40))
-        self.label.setFont(font1)
+        self.label.setFont(font)
         self.label.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
 
         self.verticalLayout.addWidget(self.label)
@@ -152,15 +136,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.pushButton_2 = QPushButton(self.frame_4)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        font2 = QFont()
-        font2.setBold(False)
-        self.pushButton_2.setFont(font2)
+        font1 = QFont()
+        font1.setBold(False)
+        self.pushButton_2.setFont(font1)
 
         self.verticalLayout_2.addWidget(self.pushButton_2)
 
         self.pushButton_3 = QPushButton(self.frame_4)
         self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setFont(font2)
+        self.pushButton_3.setFont(font1)
 
         self.verticalLayout_2.addWidget(self.pushButton_3)
 
@@ -190,7 +174,6 @@ class Ui_MainWindow(object):
         self.action_2.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
         self.action_3.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0439", None))
         self.action_4.setText(QCoreApplication.translate("MainWindow", u"\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"X", None))
         self.toolButton.setText(QCoreApplication.translate("MainWindow", u"...", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u0427\u0442\u043e \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c?", None))
         self.toolButton_2.setText(QCoreApplication.translate("MainWindow", u"...", None))
