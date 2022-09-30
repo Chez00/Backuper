@@ -2,6 +2,7 @@ import os
 import shutil
 import threading
 import asyncio
+import time
 
 
 class CopyFiles:
@@ -19,6 +20,7 @@ class CopyFiles:
         src = self.ui.lineEdit.text()
         dst = self.ui.lineEdit_2.text()
         if src != '' and dst != '':
+            self.ui.pushButton_2.hide()
             self.ui.label_8.setText('Выполняется копирование данных:')
             self.Count = 0
             self.Prog = 0
@@ -36,25 +38,31 @@ class CopyFiles:
         self.ui.progressBar.setValue(progg)
         if progg >= 100:
             self.ui.label_8.setText('Копирование завершено!')
-
+            self.ui.pushButton_2.show()
+            time.sleep(5)
+            self.ui.frame_8.hide()
         else:
             self.ui.label_8.setText('Выполняется копирование данных:')
 
     def copytree(self, src, dst, symlinks=False, ignore=None):
 
         try:
+            print('copy')
             if not os.path.exists(dst):
                 os.makedirs(dst)
             for item in os.listdir(src):
+                print('copy1')
                 s = os.path.join(src, item)
                 d = os.path.join(dst, item)
                 self.Prog += os.path.getsize(s) / 1024 / 1024
+                asyncio.run(self.progress_bar())
                 if os.path.isdir(s):
                     self.copytree(s, d, symlinks, ignore)
                 else:
                     if not os.path.exists(d) or os.stat(s).st_mtime - os.stat(d).st_mtime > 1:
                         shutil.copy2(s, d)
-                        asyncio.run(self.progress_bar())
+
+
         except ValueError:
             print('Error')
 
