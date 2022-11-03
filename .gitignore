@@ -28,3 +28,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows
+__pycache__/Design.cpython-310.pyc
+__pycache__/Copying.cpython-310.pyc
